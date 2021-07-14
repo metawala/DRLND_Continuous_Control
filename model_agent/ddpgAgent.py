@@ -101,19 +101,6 @@ class Agent():
         self.noise.reset()
 
     def act(self, state, add_noise = True):
-        '''
-        state = torch.from_numpy(state).float().to(self.device)
-        self.actorLocal.eval()
-        with torch.no_grad():
-            actionValues = self.actorLocal.forward(state)
-
-        self.actorLocal.train()
-        actionValues += self.noise.sample()
-        actionValues = np.clip(actionValues, -1, 1)
-
-        return actionValues
-        '''
-
         state = torch.from_numpy(state).float().to(self.device)
         self.actorLocal.eval()
         with torch.no_grad():
