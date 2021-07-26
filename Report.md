@@ -1,6 +1,6 @@
 [//]: # (Image References)
 
-[image1]: ./ReportImages/ActorModel.png "Model"
+[image1]: ./ReportImages/ActorModel.png "Actor Model"
 [image2]: ./ReportImages/ResultGraph.png "ResultGraph"
 [image3]: ./ReportImages/PsuedoCode.png "Psuedo Code"
 
@@ -36,12 +36,10 @@ Following a psuedo code for the DDPG algorithm used:
 
 ## Plots of Rewards:
 This has been quite a challanging project. Small updates and changes in the model resulted quite a lot of changes in the training result.
-Initially without a random seed and batch normalization the model took way too much time to train. However, after adding a random seed and updating the initializer and adding batch normalization we can see that the model was solved in **`xxx EPISODES`**.
+Initially without a random seed and batch normalization the model took way too much time to train. However, after adding a random seed and updating the initializer and adding batch normalization we can see that the model was solved in **`243 EPISODES`**.
 
 Below is a graph of the reward as plotted agains episodes:
 ![Result Graph][image2]
-
-_(At the time of this submission, the model was still running. I will try and update the project as soon as possible, but based on current progress it looks like the model will be done in 300-350 episodes.)_
 
 ## Ideas for Future Work:
 This project implements the RelayBuffer but there is room for trying out other novel methods that were advised in the Project description as well:

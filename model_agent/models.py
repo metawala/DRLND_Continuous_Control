@@ -73,6 +73,6 @@ class Critic(nn.Module):
     def forward(self, state, action):
         state = self.BN1(state)
         xs = F.relu(self.FC1(state))
-        x = F.relu(self.FC2(torch.cat([xs, action], dim=1)))
+        x = F.relu(self.FC2(torch.cat((xs, action), dim=1)))
         
         return self.FC3(x)

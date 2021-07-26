@@ -65,7 +65,7 @@ class Agent():
         self.stateSize  = stateSize
         self.actionSize = actionSize
         self.seed = random.seed(randomSeed)
-        self.bufferSize = int(10e6)
+        self.bufferSize = int(1e6)
         self.batchSize  = 1024
 
         self.logger = logging.getLogger(self.__class__.__name__)
