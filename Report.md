@@ -3,6 +3,7 @@
 [image1]: ./ReportImages/ActorModel.png "Actor Model"
 [image2]: ./ReportImages/ResultGraph.png "ResultGraph"
 [image3]: ./ReportImages/PsuedoCode.png "Psuedo Code"
+[image4]: ./ReportImages/CriticModel.png "Critic Model"
 
 # Project Report : Continuous Control
 This project report is in relation with the second project in DRLND course - Continuous Control. In this environment, there are `20` double-jointed arm can move to target locations. A reward of +0.1 is provided for each step that the agent's hand is in the goal location. Thus, the goal of your agent is to maintain its position at the target location for as many time steps as possible.
@@ -21,12 +22,15 @@ Here is screenshot for our Actor Model:
 
 this above is for Actor, our critic varies only slightly.
 
+While not much different, here is how the Critic model looks like:
+![Critic Model][image4]
+
 We use the following hyperparameters:
 1. Gamma - Discount Factor = 0.99
 2. Learning rate for Actor = 5e-4
 3. Learning rate for Critic = 1e-3
 
-In addition, we also `SoftUpdates` with a `TAU = 1e-3` in order to calculate target values for both Actor and Critic
+In addition, we also `SoftUpdates` with a `TAU = 1e-3` in order to calculate target values for both Actor and Critic.
 
 ### Experience Replay:
 With a `BUFFERSIZE = int(1e6)` and a `BATCHSIZE = 1024` we create a data container - the replay buffer. We batch from this random indepenent samples to stabally train the network.
