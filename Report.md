@@ -18,11 +18,13 @@ As per DDPG which makes use of an Actor and a Critic NN, we use 2 DNN models. We
 **State --> BatchNorm --> 400 --> ReLU --> 300 --> ReLU --> tanh --> action**
 
 Here is screenshot for our Actor Model:
+
 ![Actor Model][image1]
 
 this above is for Actor, our critic varies only slightly.
 
 While not much different, here is how the Critic model looks like:
+
 ![Critic Model][image4]
 
 We use the following hyperparameters:
